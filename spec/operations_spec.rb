@@ -2,11 +2,7 @@
 describe "Operations" do
   let(:file_contents) { File.read(File.join(File.dirname(__FILE__), '..', 'lib/operations.rb')) }
 
- Operations
-  #unsafe?
-    returns true if speed is greater than 60 (FAILED - 1)
-    returns true if speed is less than 40 (FAILED - 2)
-    returns false if the speed is between 40 and 60
+
     it 'returns false if the speed is between 40 and 60' do
       answer = unsafe?(50)
       expect(answer).to eq(false)
@@ -30,10 +26,10 @@ describe "Operations" do
     end
 
     it 'uses the ternary operator' do
-      methods = file_contents.split("not_safe?")
+      
       match = methods.last
       expect(match).to include("?")
     end
   end
   
-end
+
